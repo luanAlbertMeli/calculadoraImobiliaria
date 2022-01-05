@@ -3,7 +3,7 @@ package com.br.calculadoraimobiliaria.controllers;
 
 import com.br.calculadoraimobiliaria.DTO.ComodoDTO;
 import com.br.calculadoraimobiliaria.entities.Casa;
-import com.br.calculadoraimobiliaria.entities.Comodos;
+import com.br.calculadoraimobiliaria.entities.Comodo;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,7 +30,7 @@ public class CasaController {
     }
 
     @PostMapping("/maiorComodo/nomeDaCasa")
-    public Comodos getMaiorComodo(@Valid @RequestBody Casa casa){
+    public Comodo getMaiorComodo(@Valid @RequestBody Casa casa){
         return maiorComodo(casa);
     }
 

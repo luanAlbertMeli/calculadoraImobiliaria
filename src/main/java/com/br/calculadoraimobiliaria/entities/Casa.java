@@ -23,7 +23,7 @@ public class Casa {
     private String nome;
     private String endereco;
     @Valid
-    private List<Comodos> comodos;
+    private List<Comodo> comodos;
     @Valid
     private Bairro bairro;
 }

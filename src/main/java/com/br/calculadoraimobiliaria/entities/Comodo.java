@@ -9,7 +9,7 @@ import javax.validation.constraints.*;
 @Data //Setar getters e setters
 @AllArgsConstructor //gera o construtor cheio com todos argumentos
 @NoArgsConstructor
-public class Comodos {
+public class Comodo {
 
     @NotNull(message = "O campo não pode estar branco.")
     @NotEmpty(message = "O campo não pode estar vazio.")

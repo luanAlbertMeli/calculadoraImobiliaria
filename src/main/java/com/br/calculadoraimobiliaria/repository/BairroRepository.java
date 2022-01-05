@@ -25,6 +25,8 @@ public class BairroRepository {
     public Bairro buscaBairros(Casa casa) {
         return criaListaDeBairros()
                 .stream()
-                .filter(bairro -> bairro.getNome().equalsIgnoreCase(casa.getNomeBairro())).findFirst().orElseThrow(() -> new RepositoryException("Bairro não encontrado na base de dados."));
+                .filter(bairro -> bairro.getNome().equalsIgnoreCase(casa.getNomeBairro()))
+                .findFirst()
+                .orElseThrow(() -> new RepositoryException("Bairro não encontrado na base de dados."));
     }
 }

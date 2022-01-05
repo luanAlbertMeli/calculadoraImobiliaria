@@ -4,7 +4,7 @@ import com.br.calculadoraimobiliaria.entities.Bairro;
 import com.br.calculadoraimobiliaria.entities.Casa;
 import com.br.calculadoraimobiliaria.exception.RepositoryException;
 import com.br.calculadoraimobiliaria.repository.BairroRepository;
-import com.br.calculadoraimobiliaria.ultil.CasaUtil;
+import com.br.calculadoraimobiliaria.util.CasaUtil;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

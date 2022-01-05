@@ -1,16 +1,24 @@
 package com.br.calculadoraimobiliaria.services;
 
 import com.br.calculadoraimobiliaria.DTO.ComodoDTO;
+import com.br.calculadoraimobiliaria.entities.Bairro;
 import com.br.calculadoraimobiliaria.entities.Casa;
 import com.br.calculadoraimobiliaria.entities.Comodo;
+import com.br.calculadoraimobiliaria.repository.BairroRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CasaService {
+
+    @Autowired
+    BairroRepository bairroRepository;
+
     public static double metroQuadrados(Casa casa) {
         double metrosTotais = 0;
 
@@ -20,8 +28,10 @@ public class CasaService {
         return metrosTotais;
     }
 
-    public static BigDecimal valorCasa(Casa casa) {
-        return casa.getBairro().getValorRegiao().multiply(BigDecimal.valueOf(metroQuadrados(casa)));
+    public BigDecimal valorCasa(Casa casa) {
+        Bairro bairro = bairroRepository.buscaBairros(casa);
+
+        return bairro.getValorRegiao().multiply(BigDecimal.valueOf(metroQuadrados(casa)));
     }
 
     public static Comodo maiorComodo(Casa casa) {

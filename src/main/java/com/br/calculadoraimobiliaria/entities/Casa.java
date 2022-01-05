@@ -24,6 +24,6 @@ public class Casa {
     private String endereco;
     @Valid
     private List<Comodo> comodos;
-    @Valid
-    private Bairro bairro;
+    @NotNull
+    private String nomeBairro;
 }

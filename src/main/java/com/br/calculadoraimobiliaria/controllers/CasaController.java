@@ -4,6 +4,8 @@ package com.br.calculadoraimobiliaria.controllers;
 import com.br.calculadoraimobiliaria.DTO.ComodoDTO;
 import com.br.calculadoraimobiliaria.entities.Casa;
 import com.br.calculadoraimobiliaria.entities.Comodo;
+import com.br.calculadoraimobiliaria.services.CasaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +20,8 @@ import static com.br.calculadoraimobiliaria.services.CasaService.*;
 @RestController
 public class CasaController {
 
+    @Autowired
+    CasaService casaService;
 
     @PostMapping("/area/nomeDaCasa")
     public double getMetrosQuadrados(@Valid @RequestBody Casa casa){
@@ -26,7 +30,7 @@ public class CasaController {
 
     @PostMapping("/valor/nomeDaCasa")
     public BigDecimal getValorCasa(@Valid @RequestBody Casa casa){
-        return valorCasa(casa);
+        return casaService.valorCasa(casa);
     }
 
     @PostMapping("/maiorComodo/nomeDaCasa")

@@ -24,6 +24,8 @@ public class Casa {
     private String endereco;
     @Valid
     private List<Comodo> comodos;
-    @NotNull
+    @NotNull(message = "Nome do bairro não deve está em branco")
+    @NotEmpty(message = "O nome do bairro não pode estar vazio.")
+    @Size(max = 45, message = "O comprimento do bairro não pode exceder 45 caracteres")
     private String nomeBairro;
 }

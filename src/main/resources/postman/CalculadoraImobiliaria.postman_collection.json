@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "dbe7d868-9294-496c-9e3a-41b9440357a6",
+		"name": "CalculadoraImobiliaria",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ValorCasa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"Sala\",\n            \"largura\": 25,\n            \"comprimento\": 25\n        },\n        {\n            \"nome\": \"Quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n    \"nomeBairro\": \"São Mateus\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/valor/nomeDaCasa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"valor",
+						"nomeDaCasa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AreaCasa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"bairro\":{\n        \"valorRegiao\": 300.00,\n        \"nome\": \"São Mateus\"\n    },\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 30,\n            \"comprimento\": 25\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/area/nomeDaCasa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"area",
+						"nomeDaCasa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MaiorComodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 8.0,\n            \"comprimento\": 5.0\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/area/nomeDaCasa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"area",
+						"nomeDaCasa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AreaComodos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 8.0,\n            \"comprimento\": 5.0\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/area/nomeDaCasa",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"area",
+						"nomeDaCasa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

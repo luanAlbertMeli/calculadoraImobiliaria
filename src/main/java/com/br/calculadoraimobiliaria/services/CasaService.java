@@ -5,6 +5,7 @@ import com.br.calculadoraimobiliaria.entities.Casa;
 import com.br.calculadoraimobiliaria.entities.Comodos;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,8 +19,8 @@ public class CasaService {
         }
         return metrosTotais;
     }
-    public static double  valorCasa(Casa casa){
-        return metroQuadrados(casa) * 800;
+    public static BigDecimal  valorCasa(Casa casa){
+        return casa.getBairro().getValorRegiao().multiply(BigDecimal.valueOf(metroQuadrados(casa)));
     }
 
     public static Comodos maiorComodo(Casa casa){
@@ -27,7 +28,7 @@ public class CasaService {
 
         Comodos comodos = new Comodos();
 
-        for(Comodos cmd: casa.getComodos()){ //percorrendo todos os comodos da casa
+        for(Comodos cmd: casa.getComodos()){
             double m = cmd.getComprimento() * cmd.getLargura();
             if(m > comodoMaior){
                 comodos = cmd;

@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.*;
 
-@Data //Setar getters e setters
-@AllArgsConstructor //gera o construtor cheio com todos argumentos
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class Comodo {
 

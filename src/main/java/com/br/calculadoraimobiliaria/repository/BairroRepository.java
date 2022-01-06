@@ -6,6 +6,7 @@ import com.br.calculadoraimobiliaria.exception.RepositoryException;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +15,10 @@ public class BairroRepository {
 
     public List<Bairro> criaListaDeBairros() {
         List<Bairro> bairrosCadastrados = new ArrayList<>();
-        bairrosCadastrados.add(new Bairro(new BigDecimal(800.00), "Niteroi"));
-        bairrosCadastrados.add(new Bairro(new BigDecimal(900.00), "Inga"));
-        bairrosCadastrados.add(new Bairro(new BigDecimal(1000.00), "Copacabana"));
-        bairrosCadastrados.add(new Bairro(new BigDecimal(1500.00), "Ipanema"));
+        bairrosCadastrados.add(new Bairro(new BigDecimal("800.00"), "Niteroi"));
+        bairrosCadastrados.add(new Bairro(new BigDecimal("900.00"), "Inga"));
+        bairrosCadastrados.add(new Bairro(new BigDecimal("1000.00"), "Copacabana"));
+        bairrosCadastrados.add(new Bairro(new BigDecimal("1500.00"), "Ipanema"));
 
         return bairrosCadastrados;
     }

@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data //Setar getters e setters
-@AllArgsConstructor //gera o construtor cheio com todos argumentos
+@Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class ComodoDTO {
     private Comodo comodo;

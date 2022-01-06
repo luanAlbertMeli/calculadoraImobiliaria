@@ -60,7 +60,7 @@ public class CasaServiceTest {
     void deveRetornarValorCasa( ){
         Casa casa = casaUtil.criaCasa("Niteroi");
         BigDecimal valorCasa = casaService.valorCasa(casa);
-        Assertions.assertEquals(new BigDecimal("233600.0"), valorCasa);
+        Assertions.assertEquals(new BigDecimal("233600.000"), valorCasa);
     }
 
 }

@@ -34,7 +34,7 @@ public class ExceptionAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = RepositoryException.class)
-    public ResponseEntity handleRepositoryException(RepositoryException ex){
+    public ResponseEntity handleRepositoryException(RepositoryException ex) {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 }

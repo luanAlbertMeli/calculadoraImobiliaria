@@ -6,6 +6,7 @@ import com.br.calculadoraimobiliaria.entities.Casa;
 import com.br.calculadoraimobiliaria.entities.Comodo;
 import com.br.calculadoraimobiliaria.services.CasaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,23 +25,22 @@ public class CasaController {
     CasaService casaService;
 
     @PostMapping("/area/nomeDaCasa")
-    public double getMetrosQuadrados(@Valid @RequestBody Casa casa){
-        return metroQuadrados(casa);
+    public ResponseEntity<Double> getMetrosQuadrados(@Valid @RequestBody Casa casa) {
+        return ResponseEntity.ok().body(metroQuadrados(casa));
     }
 
     @PostMapping("/valor/nomeDaCasa")
-    public BigDecimal getValorCasa(@Valid @RequestBody Casa casa){
-        return casaService.valorCasa(casa);
+    public ResponseEntity<BigDecimal> getValorCasa(@Valid @RequestBody Casa casa) {
+        return ResponseEntity.ok().body(casaService.valorCasa(casa));
     }
 
     @PostMapping("/maiorComodo/nomeDaCasa")
-    public Comodo getMaiorComodo(@Valid @RequestBody Casa casa){
-        return maiorComodo(casa);
+    public ResponseEntity<Comodo> getMaiorComodo(@Valid @RequestBody Casa casa) {
+        return ResponseEntity.ok().body(maiorComodo(casa));
     }
 
     @PostMapping("/areaComodos/nomeDaCasa")
-    public List<ComodoDTO> getAreaComodos(@Valid @RequestBody Casa casa){
-        return areaComodos(casa);
+    public ResponseEntity<List<ComodoDTO>> getAreaComodos(@Valid @RequestBody Casa casa) {
+        return ResponseEntity.ok().body(areaComodos(casa));
     }
-
 }

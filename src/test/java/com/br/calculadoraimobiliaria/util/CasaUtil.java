@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class CasaUtil {
 
-    public Casa criaCasa(String nomeBairro) {
+    public static Casa criaCasa(String nomeBairro) {
         List<Comodo> comodos = new ArrayList<>();
         comodos.add(new Comodo("Sala", 12, 13));
         comodos.add(new Comodo("Banheiro", 8.0, 7));

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "dbe7d868-9294-496c-9e3a-41b9440357a6",
+		"_postman_id": "7cb6978c-c466-4cbe-86d3-59e49a5b71b5",
 		"name": "CalculadoraImobiliaria",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"Sala\",\n            \"largura\": 25,\n            \"comprimento\": 25\n        },\n        {\n            \"nome\": \"Quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n    \"nomeBairro\": \"São Mateus\"\n}",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"Sala\",\n            \"largura\": 25,\n            \"comprimento\": 25\n        },\n        {\n            \"nome\": \"Quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n    \"nomeBairro\": \"Ipanema\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +40,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"bairro\":{\n        \"valorRegiao\": 300.00,\n        \"nome\": \"São Mateus\"\n    },\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 30,\n            \"comprimento\": 25\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"Sala\",\n            \"largura\": 25,\n            \"comprimento\": 25\n        },\n        {\n            \"nome\": \"Quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n    \"nomeBairro\": \"Ipanema\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -68,7 +68,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 8.0,\n            \"comprimento\": 5.0\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 8.0,\n            \"comprimento\": 5.0\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n     \"nomeBairro\": \"Ipanema\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -96,7 +96,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"sala\",\n            \"largura\": 8.0,\n            \"comprimento\": 5.0\n        },\n         {\n            \"nome\": \"quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ]\n}",
+					"raw": "{\n    \"nome\": \"CasaBraba\",\n    \"endereco\": \"Rua Meli\",\n    \"comodos\": [\n        {\n            \"nome\": \"Sala\",\n            \"largura\": 25,\n            \"comprimento\": 25\n        },\n        {\n            \"nome\": \"Quarto\",\n            \"largura\": 3.0,\n            \"comprimento\": 3.0\n        }\n    ],\n    \"nomeBairro\": \"Ipanema\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -104,13 +104,13 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/area/nomeDaCasa",
+					"raw": "localhost:8080/areaComodos/nomeDaCasa",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"area",
+						"areaComodos",
 						"nomeDaCasa"
 					]
 				}

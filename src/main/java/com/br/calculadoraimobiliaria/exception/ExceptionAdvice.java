@@ -1,6 +1,5 @@
-package com.br.calculadoraimobiliaria.services;
+package com.br.calculadoraimobiliaria.exception;
 
-import com.br.calculadoraimobiliaria.exception.RepositoryException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.i18n.LocaleContextHolder;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
